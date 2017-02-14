@@ -1,6 +1,9 @@
 /**
  * Created by ethan on 2017-02-07.
  */
+import java.util.ArrayList;
+import java.util.List;
+
 public class Student extends Person {
     String major;
     List<Course> courseList;
@@ -15,6 +18,8 @@ public class Student extends Person {
     }
 
     public void addCourse(Course c){
-
+        if(this.courseList==null)
+            this.courseList = new ArrayList<Course>();
+        this.courseList.add(c);
     }
 }
